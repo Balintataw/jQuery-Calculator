@@ -14,7 +14,8 @@ $(document).ready(function() {
         console.log(`storedNum = ${storedNum}`)
 
     })
-
+    
+    //pushes operator to storedNum array
     $('#add, #subtract, #multiply, #divide').click(function(e) {
         e.preventDefault(e)
         
@@ -31,22 +32,24 @@ $(document).ready(function() {
             operator = '/'
             storedNum.push(operator)
         }
-//         num = ''
         console.log(`num = ${num}`)
         console.log(`storedNum = ${storedNum}`)
 
     });
 
+    //runs all equations in storedNum array but not according to PEMDAS
     $('#equalsButton').click(function(e) {
         e.preventDefault(e);
         
-//         let currentNum = input1.val()
         input1.val(eval(storedNum.join('')))
-//         input1.val(eval(`${storedNum} ${operator} ${currentNum}`))
-//         storedNum = eval(`${storedNum} ${operator} ${currentNum}`)
-//         console.log(currentNum)
-//         console.log(`num = ${num}`)
-//         console.log(`storedNum = ${storedNum}`)
+    })
+
+    // clears all data
+    $('#clearButton').click(function(e) {
+        e.preventDefault(e);
+
+        input1.val('0');
+        storedNum = [];
     })
 
     

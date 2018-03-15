@@ -1,13 +1,18 @@
+body {
+    background: linear-gradient(#905656, #2eff00);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 1000px;
+}
+
 .container {
-    height: 423px;
+    height: 505px;
     width: 468px;
     background: black;
     border: 5px solid #00ff36;
     border-radius: 15px 30px;
-    : 
-
-/*     align-items:center; */
-/*     justify-content:center; */
+    margin-left:50px;
+    margin-top: 50px;
 }
 
 #numInputs {
@@ -29,7 +34,6 @@
     font-size: 40px;
     text-align: right;
     border-radius: 2px;
-/*     padding-right: 10px; */
 }
 
 .calc-body {
@@ -44,35 +48,40 @@
     width: 300px;
 }
 
-button {
-    height:80px;
+.numbers button, button {
+    height: 80px;
     border: 1px solid black;
-    font-size: 18px;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 28px;
     outline: 0;
-/*     border: none; */
+    cursor: pointer;
+}
+
+button {
     background: #00ff36;
     border-radius: 100%;
     box-shadow:  2px 2px 9px #d8b600;
 }
 
 button:active {
-    box-shadow: inset 2px 2px 9px #d8b600;
+    box-shadow: inset 2px 2px 9px #ada370;
 }
 
 .numbers button {
     flex-wrap: wrap;
-    height: 80px;
     width: 100px;
-    border: 1px solid black;
-    font-size: 18px
 }
 
-
+#equalsButton {
+    margin-top: 10px;
+    width: 400px;
+    border-radius: 10px;
+    height: 60px;
+}
 
 .operators {
     display: flex;
     flex-direction: column;
     width: 100px;
-/*     border-radius: 100px; */
-/*     width: 24%; */
 }
