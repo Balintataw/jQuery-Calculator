@@ -2,7 +2,8 @@
     height: 423px;
     width: 468px;
     background: black;
-    border-radius: 15px;
+    border: 5px solid #00ff36;
+    border-radius: 15px 30px;
     : 
 
 /*     align-items:center; */
@@ -27,12 +28,14 @@
     border: 0;
     font-size: 40px;
     text-align: right;
+    border-radius: 2px;
 /*     padding-right: 10px; */
 }
 
 .calc-body {
     display: flex;
     width: 400px;
+    margin-top: 10px;
 }
 
 .numbers {
@@ -43,16 +46,24 @@
 
 button {
     height:80px;
-    border: 2px solid black;
+    border: 1px solid black;
     font-size: 18px;
-    background: #00ff36
+    outline: 0;
+/*     border: none; */
+    background: #00ff36;
+    border-radius: 100%;
+    box-shadow:  2px 2px 9px #d8b600;
+}
+
+button:active {
+    box-shadow: inset 2px 2px 9px #d8b600;
 }
 
 .numbers button {
     flex-wrap: wrap;
     height: 80px;
     width: 100px;
-    border: 2px solid black;
+    border: 1px solid black;
     font-size: 18px
 }
 
@@ -62,5 +73,6 @@ button {
     display: flex;
     flex-direction: column;
     width: 100px;
+/*     border-radius: 100px; */
 /*     width: 24%; */
 }

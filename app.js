@@ -9,7 +9,7 @@ $(document).ready(function() {
         e.preventDefault(e);
         num = this.innerText;
         storedNum.push(num);
-        input1.val(num)
+        input1.val(storedNum.join(''))
         console.log(`num = ${num}`)
         console.log(`storedNum = ${storedNum}`)
 
@@ -18,14 +18,9 @@ $(document).ready(function() {
     $('#add, #subtract, #multiply, #divide').click(function(e) {
         e.preventDefault(e)
         
-
         if (this.id === 'add') {
             operator = '+';
             storedNum.push(operator)
-// //             var currentNum = input1.val()
-// //             storedNum += Number(num)
-//             input1.val(Number(num) + Number(storedNum))
-// //             num = '';
         } else if (this.id === 'subtract') {
             operator = '-'
             storedNum.push(operator)
