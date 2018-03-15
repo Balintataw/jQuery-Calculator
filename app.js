@@ -16,7 +16,7 @@ $(document).ready(function() {
     })
     
     //pushes operator to storedNum array
-    $('#add, #subtract, #multiply, #divide').click(function(e) {
+    $('#add, #subtract, #multiply, #divide, #numDecimal').click(function(e) {
         e.preventDefault(e)
         
         if (this.id === 'add') {
@@ -30,6 +30,9 @@ $(document).ready(function() {
             storedNum.push(operator)
         } else if (this.id === 'divide') {
             operator = '/'
+            storedNum.push(operator)
+        } else if (this.id === 'numDecimal') {
+            operator = '.'
             storedNum.push(operator)
         }
         console.log(`num = ${num}`)
